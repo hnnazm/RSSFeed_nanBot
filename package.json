@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/hnnazm/RSSFeed_nanBot/issues"
   },
-  "homepage": "https://github.com/hnnazm/RSSFeed_nanBot#readme"
+  "homepage": "https://github.com/hnnazm/RSSFeed_nanBot#readme",
+  "dependencies": {
+    "telegraf": "^4.5.2"
+  }
 }
