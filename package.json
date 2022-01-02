@@ -1,0 +1,19 @@
+{
+  "name": "rssfeed_nanbot",
+  "version": "1.0.0",
+  "description": "Telegram bot for RSS feed",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hnnazm/RSSFeed_nanBot.git"
+  },
+  "author": "hnnazm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hnnazm/RSSFeed_nanBot/issues"
+  },
+  "homepage": "https://github.com/hnnazm/RSSFeed_nanBot#readme"
+}
