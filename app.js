@@ -1,4 +1,3 @@
-// const { Telegraf } = require('telegraf')
 import { Telegraf } from "telegraf";
 import dotenv from "dotenv";
 import help from "./commands/help.js";
