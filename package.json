@@ -2,6 +2,7 @@
   "name": "rssfeed_nanbot",
   "version": "1.0.0",
   "description": "Telegram bot for RSS feed",
+  "type": "module",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
