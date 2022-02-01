@@ -1,4 +1,14 @@
 [
-  "https://www.reddit.com/r/Python/.rss",
-  "https://www.reddit.com/r/javascript/.rss"
+  {
+    "title": "Python",
+    "feeds": [
+      "https://www.reddit.com/r/Python/.rss"
+    ]
+  },
+  {
+    "title": "Javascript",
+    "feeds": [
+      "https://www.reddit.com/r/javascript/.rss"
+    ]
+  }
 ]

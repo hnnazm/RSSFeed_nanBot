@@ -7,7 +7,11 @@ const help_text = `
 /list
   List all RSS sources
 
-/fetch <source>
+/fetch [category]
+  Fetch RSS feed from the
+  source
+
+/add <category> <source>
   Fetch RSS feed from the
   source
 

@@ -1,5 +1,3 @@
-import * as fs from 'fs';
-import * as path from 'path';
 import { writeList } from "../utils/fileHandler.js";
 
 async function add(ctx) {
@@ -7,9 +5,8 @@ async function add(ctx) {
 
   args.shift();
 
-  for (let i = 0; i < args.length; i++) {
-    writeList('rss.json', args[i]);
-  }
+  if (args.length >= 1)
+    writeList('rss.json', args[0], args[1]);
 }
 
 export default add;

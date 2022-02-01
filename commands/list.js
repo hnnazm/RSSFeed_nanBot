@@ -1,24 +1,26 @@
-import * as fs from 'fs';
-import * as path from 'path';
+import { readList } from '../utils/fileHandler.js';
 
 async function list(ctx) {
-  const fp = path.join(process.cwd(), 'rss.json')
+  const args = ctx.update.message.text.split(' ');
+  let outputString = '';
 
-  fs.readFile(fp, 'utf8', (err, contents) => {
-    if (err) {
-    console.error(err);
-    return;
-    }
+  args.shift();
 
-    try {
-      const jsonString = JSON.parse(contents);
-      for (let i = 0; i < jsonString.length; i++) {
-        ctx.reply(`${i + 1}. ${jsonString[i]}`);
-      }
-    } catch (jsonError) {
-      console.error('Error parsing JSON: ', jsonError);
-    }
-  });
+  outputString += `======= RSS Sources =======\n`;
+  if (args.length >= 1)
+    readList('rss.json', args[0]).feeds.forEach((l, i) =>
+      outputString += `${i + 1}. ${l}\n`)
+  else
+    readList('rss.json').forEach((s) => {
+      outputString += `${s.title}\n`;
+      s.feeds.forEach((l, i) => outputString += `${i + 1}. ${l}\n`)
+    })
+
+  outputString += `=========================\n`;
+
+  ctx.reply(outputString);
+
+  return
 }
 
 export default list;
